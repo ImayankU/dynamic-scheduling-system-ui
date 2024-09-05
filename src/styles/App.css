@@ -1,8 +1,60 @@
+/* App.css */
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background color */
   }
   
-  h1 {
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for pages */
+  .page {
+    background-color: #ffffff; /* White background for content */
+    border: 1px solid #dddddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    max-width: 600px; /* Maximum width for readability */
+    width: 100%; /* Full width up to max-width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Make sure the content is centered */
+  .page h1, .page h2, .page h3, .page p {
     text-align: center;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .page {
+      padding: 15px;
+      max-width: 90%;
+    }
+  }
+  
+  /* Additional styles */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff; /* Blue background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
   }
   
