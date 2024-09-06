@@ -7,10 +7,10 @@ const AdminDashboard = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const result = await axios.get('/api/auth');
+                const result = await axios.get('/api/users');
                 setUsers(result.data);
             } catch (error) {
-                console.error(error);
+                console.error('Error fetching users:', error);
             }
         };
 
@@ -18,7 +18,7 @@ const AdminDashboard = () => {
     }, []);
 
     return (
-        <div>
+        <div className="admin-dashboard">
             <h1>Admin Dashboard</h1>
             <ul>
                 {users.map(user => (

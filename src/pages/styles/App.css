@@ -1,0 +1,148 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light neutral background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Form Box (Shared for Login and Add Availability) */
+.form-box {
+  background-color: #722f37; /* Wine color */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  cursor:pointer;
+}
+
+/* Header */
+h1, h2 {
+  text-align: center;
+  color: #fff;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #fff; /* White color for labels */
+  font-weight: bold;
+  display: block;
+}
+
+/* Input Fields */
+.input-group input,
+.input-group select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #722f37; /* Same wine color for input fields */
+  color: #fff; /* White text inside input */
+}
+
+/* Placeholder Style */
+::placeholder {
+  color: #e6e6e6; /* Lighter white color for placeholder */
+}
+
+/* Input Focus */
+.input-group input:focus,
+.input-group select:focus {
+  background-color: #722f37; /* Keep wine color on focus */
+  border: none;
+  color: #fff;
+}
+
+/* Buttons */
+.button {
+  background-color: #5a2028; /* Darker wine color for button */
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Button Hover */
+.button:hover {
+  background-color: #3d151b; /* Even darker wine color on hover */
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #b2ebf2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Forgot Password Hover */
+.forgot-password:hover {
+  color: #80deea;
+}
+
+/* Sign Up Link */
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.signup-link a {
+  color: #b2ebf2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Sign Up Link Hover */
+.signup-link a:hover {
+  color: #80deea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-box {
+      padding: 20px;
+  }
+}

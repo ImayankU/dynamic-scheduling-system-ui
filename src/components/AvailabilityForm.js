@@ -12,26 +12,48 @@ const AvailabilityForm = () => {
             await axios.post('/api/availability', { user: 'user@example.com', start, end, duration });
             alert('Availability added successfully!');
         } catch (error) {
-            console.error(error);
+            console.error('Error adding availability:', error);
         }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Start Time:
-                <input type="datetime-local" value={start} onChange={(e) => setStart(e.target.value)} />
-            </label>
-            <label>
-                End Time:
-                <input type="datetime-local" value={end} onChange={(e) => setEnd(e.target.value)} />
-            </label>
-            <label>
-                Duration (minutes):
-                <input type="number" value={duration} onChange={(e) => setDuration(e.target.value)} />
-            </label>
-            <button type="submit">Add Availability</button>
-        </form>
+        <div className="availability-container">
+            <h1>Set Your Availability</h1>
+            <form className="availability-form" onSubmit={handleSubmit}>
+                <div className="input-group">
+                    <label htmlFor="start-time">Start Time:</label>
+                    <input
+                        type="datetime-local"
+                        id="start-time"
+                        value={start}
+                        onChange={(e) => setStart(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="input-group">
+                    <label htmlFor="end-time">End Time:</label>
+                    <input
+                        type="datetime-local"
+                        id="end-time"
+                        value={end}
+                        onChange={(e) => setEnd(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="input-group">
+                    <label htmlFor="duration">Duration (minutes):</label>
+                    <input
+                        type="number"
+                        id="duration"
+                        value={duration}
+                        onChange={(e) => setDuration(Number(e.target.value))}
+                        min="1"
+                        required
+                    />
+                </div>
+                <button className="button" type="submit">Add Availability</button>
+            </form>
+        </div>
     );
 };
 
